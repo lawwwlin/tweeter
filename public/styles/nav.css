@@ -19,13 +19,11 @@ nav span {
 .box{
   display: flex;
   flex-direction: column;
-  align-content: center;
+  justify-content: center;
 }
 
-.text {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+p {
+  margin-block-end: 0px;
 }
 
 .logo {
