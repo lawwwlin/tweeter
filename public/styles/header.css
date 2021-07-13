@@ -1,0 +1,12 @@
+header {
+  height: 400px;
+  background-color: rgba(243, 154, 22, 0.822);
+  background-image: url("/images/inspiration-geometry.png");
+}
+
+header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
