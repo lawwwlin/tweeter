@@ -1,4 +1,5 @@
 header.page {
+  margin-top: 120px;
   height: 400px;
   background-color: rgba(243, 154, 22, 0.822);
   background-image: url("/images/inspiration-geometry.png");
