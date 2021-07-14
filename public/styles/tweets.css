@@ -16,6 +16,11 @@ article header {
   justify-content: space-between;
 }
 
+.avatar-name {
+  display: flex;
+  align-items: center;
+}
+
 .username {
   font-weight: lighter;
   color: grey;
