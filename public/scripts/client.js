@@ -50,17 +50,22 @@ $(document).ready(() => {
   $form.submit(function(event) {
     event.preventDefault();
     const $input = $('#tweet-text');
-    const text = $input.val();
-    if (text === null) {
-      alert('Nothing to tweet!');
+    const text = $input.val().trim();
+
+    if (text.length === 0) {
+      return alert('Nothing to tweet!');
     } else if (text.length > 140) {
-      alert('Tweet is too long!');
+      return alert('Tweet is too long!');
     }
+
     const urlEncodedData = $(this).serialize();
     $.post('/tweets', urlEncodedData, (response) => {
       console.log(response);
       loadTweets();
     });
-  });
 
+    const $counter = $('#character-counter');
+    $counter.text(140);
+    $input.val('');
+  });
 });
