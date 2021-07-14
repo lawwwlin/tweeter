@@ -62,5 +62,15 @@ $(document).ready(() => {
     return $tweet;
   };
 
+  const $form = $('.new-tweet form');
+  $form.submit(function(event) {
+    event.preventDefault();
+    const urlEncodedData = $(this).serialize();
+    console.log(urlEncodedData);
+    $.post('/tweets', urlEncodedData, (response) => {
+      console.log(response);
+    });
+  });
+
   renderTweets(data);
 });
