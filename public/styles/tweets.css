@@ -1,0 +1,39 @@
+article {
+  border: 3px solid black;
+  border-radius: 15px;
+  margin: 2em;
+}
+
+article header {
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+article footer {
+  height: 60px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-top: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer div {
+  margin-top: 1em;
+  font-size: smaller;
+}
+
+footer i {
+  font-size: small;
+  margin-left: 2px;
+  margin-right: 2px;
+}
