@@ -3,9 +3,6 @@ header.page {
   height: 400px;
   background-color: rgb(255, 196, 0);
   background-image: url("/images/inspiration-geometry.png");
-  position: fixed;
-  top: 0; 
-  width: 100%; 
 }
 
 header.page div {
