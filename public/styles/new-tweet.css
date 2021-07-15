@@ -4,7 +4,21 @@
   justify-content: center;
 }
 
-div {
+.error {
+  color: red;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+#error-long {
+  display: none;
+}
+
+#error-none {
+  display: none;
+}
+
+form div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

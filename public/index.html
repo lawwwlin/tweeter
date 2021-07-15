@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet"> 
 
     <!-- App CSS -->
@@ -70,7 +69,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+
+        <h3 class="error" id="error-long"><i class="fas fa-exclamation-triangle"></i> Please keep tweet under 140 characters! <i class="fas fa-exclamation-triangle"></i></h3>
+
+        <h3 class="error" id="error-none"><i class="fas fa-exclamation-triangle"></i> You got nothing to say? <i class="fas fa-exclamation-triangle"></i></h3>
+
         <form method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -79,6 +82,7 @@
             <output name="counter" class="counter" id="character-counter" for="tweet-text">140</output>
           </div>
         </form>
+
       </section>      
     </main>
 

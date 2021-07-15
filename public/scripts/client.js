@@ -52,12 +52,22 @@ $(document).ready(() => {
     const $input = $('#tweet-text');
     const text = $input.val().trim();
 
+    const $errorLong = $('#error-long');
+    const $errorNone = $('#error-none');
+    console.log("errorLong: ", $errorLong);
     if (text.length === 0) {
-      return alert('Nothing to tweet!');
+      $errorLong.css('display', 'none');
+      $errorNone.css('display', 'block');
+      return;
     } else if (text.length > 140) {
-      return alert('Tweet is too long!');
+      $errorNone.css('display', 'none');
+      $errorLong.css('display', 'block');
+      return;
     }
 
+    $errorNone.css('display', 'none');
+    $errorLong.css('display', 'none');
+    
     const urlEncodedData = $(this).serialize();
     $.post('/tweets', urlEncodedData, (response) => {
       console.log(response);
