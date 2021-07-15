@@ -35,28 +35,7 @@ body {
   text-align: center;
 }
 
-#page-button {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 15px;
-  z-index: 99;
-  font-size: 30px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: red;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-#page-button:hover {
-  color: white;
-  background-color: rgb(253, 172, 21);
-  transform: translateY(5px);
-}
-
-#page-button:active {
-  transform: translateY(-10px);
+@media only screen and (min-width: 1024px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
 }
 
