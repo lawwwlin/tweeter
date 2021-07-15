@@ -84,7 +84,8 @@ $(document).ready(() => {
     const height = $('.new-tweet').height();
     const position = $(window).scrollTop();
     if (position !== 0) {
-      return $(window).scrollTop(0);
+      $(window).scrollTop(0);
+      return $('#tweet-text').focus();
     }
     $(window).scrollTop(height);
   });
