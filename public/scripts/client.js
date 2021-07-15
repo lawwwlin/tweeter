@@ -78,4 +78,14 @@ $(document).ready(() => {
     $counter.text(140);
     $input.val('');
   });
+
+  const $writeTweet = $('#write-tweet');
+  $writeTweet.click(function() {
+    const height = $('.new-tweet').height();
+    const position = $(window).scrollTop();
+    if (position !== 0) {
+      return $(window).scrollTop(0);
+    }
+    $(window).scrollTop(height);
+  });
 });

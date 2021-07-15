@@ -26,6 +26,23 @@ nav span {
   justify-content: center;
 }
 
+#write-tweet {
+  font-size: 100%;
+  font-family: inherit;
+  color: inherit;
+  border: 0;
+  background-color: inherit;
+}
+
+#write-tweet:hover {
+  color: red;
+  transform: translateY(-5px);
+}
+
+#write-tweet:active {
+  transform: translateY(10px);
+}
+
 p {
   margin-block-end: 0px;
 }
