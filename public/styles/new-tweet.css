@@ -1,3 +1,7 @@
+.container {
+  margin-top: 520px;
+}
+
 .new-tweet {
   display: flex;
   flex-direction: column;
