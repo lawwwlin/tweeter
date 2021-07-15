@@ -81,7 +81,8 @@ $(document).ready(() => {
 
   const $writeTweet = $('#write-tweet');
   $writeTweet.click(function() {
-    const height = $('.new-tweet').height();
+    // +10 for height because .new-tweet has margin on top
+    const height = $('.new-tweet').height() + $('.page').height() + 10;
     const position = $(window).scrollTop();
     if (position !== 0) {
       $(window).scrollTop(0);
