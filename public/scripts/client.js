@@ -47,7 +47,7 @@ $(document).ready(() => {
   };
 
   const $form = $('.new-tweet form');
-  $form.submit(function(event) {
+  $form.on('submit', function(event) {
     event.preventDefault();
     const $input = $('#tweet-text');
     const text = $input.val().trim();
