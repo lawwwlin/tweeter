@@ -3,7 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
 $(document).ready(() => {
 
   const loadTweets = () => {
@@ -54,7 +53,6 @@ $(document).ready(() => {
 
     const $errorLong = $('#error-long');
     const $errorNone = $('#error-none');
-    console.log("errorLong: ", $errorLong);
     if (text.length === 0) {
       $errorLong.css('display', 'none');
       $errorNone.css('display', 'block');
@@ -70,37 +68,11 @@ $(document).ready(() => {
     
     const urlEncodedData = $(this).serialize();
     $.post('/tweets', urlEncodedData, (response) => {
-      console.log(response);
       loadTweets();
     });
 
     const $counter = $('#character-counter');
     $counter.text(140);
     $input.val('');
-  });
-
-  const $writeTweet = $('#write-tweet');
-  $writeTweet.click(function() {
-    // +10 for height because .new-tweet has margin on top
-    const height = $('.new-tweet').height() + $('.page').height() + 10;
-    const position = $(window).scrollTop();
-    if (position !== 0) {
-      $(window).scrollTop(0);
-      return $('#tweet-text').focus();
-    }
-    $(window).scrollTop(height);
-  });
-
-  $(window).scroll(() => {
-    if ($(window).scrollTop() > 20) {
-      return $('#page-button').css('display', 'block');
-    } else {
-      return $('#page-button').css('display', 'none');
-    }
-  });
-
-  $('#page-button').click(function() {
-    $(window).scrollTop(0);
-    $('#tweet-text').focus();
   });
 });
