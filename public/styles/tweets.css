@@ -30,6 +30,7 @@ article header {
   margin-left: 1em;
   margin-right: 1em;
   word-wrap: break-word;
+  text-align: left;
 }
 
 article footer {
