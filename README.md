@@ -19,7 +19,7 @@ Tweeter is a simple, single-page Twitter clone built with Node, Express, HTML, C
 
 ## Bonus Feature
 - Extra compose button in the navigation bar:
-  - If input area is showing, pressing the button will hide it by     scrolling up to latest tweet.
+  - If input area is showing, pressing the button will hide it by scrolling up to latest tweet.
   - If input area is not showing, pressing the button will scroll up and auto-foucs for the user to type right away.
 - Home button will appear in the bottom right corner upon scrolling the page. Pressing the button will return to the top of the page. Button will disappear when the page is at the top. 
 
